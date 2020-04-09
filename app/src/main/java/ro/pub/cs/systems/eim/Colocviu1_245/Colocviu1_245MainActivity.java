@@ -67,7 +67,7 @@ public class Colocviu1_245MainActivity extends AppCompatActivity {
                 Bundle data = intent.getExtras();
                 Integer sum = data.getInt("sum");
                 Toast.makeText(this, "The activity returned with sum " + sum, Toast.LENGTH_LONG).show();
-//                Constants.SUM = sum;
+                Constants.SUM = sum;
                 break;
         }
     }
@@ -76,11 +76,17 @@ public class Colocviu1_245MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         // apelarea metodei din activitatea parinte este recomandata, dar nu obligatorie
         super.onSaveInstanceState(savedInstanceState);
+        TextView allTerms = (TextView)findViewById(R.id.editText_allTerms);
+        savedInstanceState.putString(Constants.ALL_TERMS_EDIT_TXT, allTerms.getText().toString());
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         // apelarea metodei din activitatea parinte este recomandata, dar nu obligatorie
         super.onRestoreInstanceState(savedInstanceState);
+        TextView allTerms = (TextView)findViewById(R.id.editText_allTerms);
+        if (savedInstanceState.getString(Constants.ALL_TERMS_EDIT_TXT) != null) {
+            allTerms.setText(savedInstanceState.getString(Constants.ALL_TERMS_EDIT_TXT));
+        }
     }
 }
