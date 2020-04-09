@@ -48,11 +48,19 @@ public class Colocviu1_245MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     TextView allTerms = (TextView)findViewById(R.id.editText_allTerms);
+                    if(Constants.ALL_TERMS_EDIT_TXT == allTerms.getText().toString()) {
+//                        Toast.makeText(this, "The activity returned with sum " + Constants.SUM, Toast.LENGTH_LONG).show();
+                    } else {
+                        Constants.ALL_TERMS_EDIT_TXT = allTerms.getText().toString();
 
-                    Intent intent = new Intent("ro.pub.cs.systems.eim.Colocviu1_245.Colocviu1_245SecondaryActivity");
-                    intent.putExtra("toAdd", allTerms.getText().toString());
+                        Intent intent = new Intent("ro.pub.cs.systems.eim.Colocviu1_245.Colocviu1_245SecondaryActivity");
+                        intent.putExtra("toAdd", allTerms.getText().toString());
 
-                    startActivityForResult(intent, ADD_ELEMENTS);
+                        startActivityForResult(intent, ADD_ELEMENTS);
+                    }
+
+
+
                 }
             }
         );
