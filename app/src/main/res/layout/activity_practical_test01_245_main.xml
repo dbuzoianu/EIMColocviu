@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Colocviu1_245MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="731dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/editText_nextTerm"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Next Term" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="11dp"
+            android:layout_toEndOf="@+id/editText_nextTerm"
+            android:text="Add" />
+
+        <EditText
+            android:id="@+id/editText_allTerms"
+            android:layout_width="387dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_nextTerm"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="611dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button_compute"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_nextTerm"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="109dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="529dp"
+            android:text="Compute" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
