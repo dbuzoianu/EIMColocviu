@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.SyncStateContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,7 @@ public class Colocviu1_245MainActivity extends AppCompatActivity {
                 Bundle data = intent.getExtras();
                 Integer sum = data.getInt("sum");
                 Toast.makeText(this, "The activity returned with sum " + sum, Toast.LENGTH_LONG).show();
+                Constants.SUM = sum;
                 break;
         }
     }
