@@ -67,7 +67,7 @@ public class Colocviu1_245MainActivity extends AppCompatActivity {
                 Bundle data = intent.getExtras();
                 Integer sum = data.getInt("sum");
                 Toast.makeText(this, "The activity returned with sum " + sum, Toast.LENGTH_LONG).show();
-                Constants.SUM = sum;
+//                Constants.SUM = sum;
                 break;
         }
     }
